@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="map_container" type="id" />
+    <item name="map_container1" type="id" />
+    <item name="map1" type="id" />
+    <item name="map2" type="id" />
+    <item name="map_container2" type="id" />
+    <item name="map3" type="id" />
+    <item name="map4" type="id" />
+</resources>
