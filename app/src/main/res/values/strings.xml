@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">MiniAct3_A</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDPCec8og_hZ9xrHPfOG4bQH2K2yKL75NA</string>
 </resources>
