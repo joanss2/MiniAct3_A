@@ -80,22 +80,18 @@ public class TagsDemo extends AppCompatActivity implements
         // Turn off the map toolbar.
         mUiSettings.setMapToolbarEnabled(false);
 
-        // Disable interaction with the map - other than clicking.
+        // Enable interaction with the map
         mUiSettings.setZoomControlsEnabled(false);
         mUiSettings.setScrollGesturesEnabled(false);
         mUiSettings.setZoomGesturesEnabled(false);
         mUiSettings.setTiltGesturesEnabled(false);
         mUiSettings.setRotateGesturesEnabled(false);
 
-        // Add a circle, a ground overlay, a marker, a polygon and a polyline to the map.
+        // Add markers to the map.
         addObjectsToMap();
 
-        // Set listeners for click events.  See the bottom of this class for their behavior.
+        // Set listener for markers.
         mMap.setOnMarkerClickListener(this);
-
-        // Override the default content description on the view, for accessibility mode.
-        // Ideally this string would be localised.
-        map.setContentDescription(getString(R.string.tags_demo_map_description));
 
         // Create bounds that include all locations of the map.
         LatLngBounds bounds = new LatLngBounds.Builder()
@@ -109,24 +105,24 @@ public class TagsDemo extends AppCompatActivity implements
     }
 
     private void addObjectsToMap() {
-        // A circle centered on Adelaide.
+        // A marker at LLEIDA.
         mLleidaMarker = mMap.addMarker(new MarkerOptions().position(LLEIDA));
         mLleidaMarker.setTag(new CustomTag("Lleida marker"));
 
 
-        // A ground overlay at Sydney.
+        // A marker at BARCELONA.
         mBarcelonaMarker = mMap.addMarker(new MarkerOptions().position(BARCELONA));
         mBarcelonaMarker.setTag(new CustomTag("Barcelona marker"));
 
-        // A marker at Hobart.
+        // A marker at TARRAGONA.
         mTarragonaMarker = mMap.addMarker(new MarkerOptions().position(TARRAGONA));
         mTarragonaMarker.setTag(new CustomTag("Tarragona marker"));
 
-        // A polygon centered at Darwin.
+        // A marker at GIRONA.
         mGironaMarker = mMap.addMarker(new MarkerOptions().position(GIRONA));
         mGironaMarker.setTag(new CustomTag("Girona marker"));
 
-        // A polyline from Perth to Brisbane.
+        // A marker at ANDORRA.
         mAndorraMarker = mMap.addMarker(new MarkerOptions().position(ANDORRA));
         mAndorraMarker.setTag(new CustomTag("Andorra marker"));
     }
@@ -139,7 +135,6 @@ public class TagsDemo extends AppCompatActivity implements
         tag.incrementClickCount();
         mTagText.setText(tag.toString());
     }
-
 
 
     @Override
