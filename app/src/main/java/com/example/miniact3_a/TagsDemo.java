@@ -81,11 +81,11 @@ public class TagsDemo extends AppCompatActivity implements
         mUiSettings.setMapToolbarEnabled(false);
 
         // Enable interaction with the map
-        mUiSettings.setZoomControlsEnabled(false);
-        mUiSettings.setScrollGesturesEnabled(false);
-        mUiSettings.setZoomGesturesEnabled(false);
-        mUiSettings.setTiltGesturesEnabled(false);
-        mUiSettings.setRotateGesturesEnabled(false);
+        mUiSettings.setZoomControlsEnabled(true);
+        mUiSettings.setScrollGesturesEnabled(true);
+        mUiSettings.setZoomGesturesEnabled(true);
+        mUiSettings.setTiltGesturesEnabled(true);
+        mUiSettings.setRotateGesturesEnabled(true);
 
         // Add markers to the map.
         addObjectsToMap();
